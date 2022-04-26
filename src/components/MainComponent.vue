@@ -1,15 +1,39 @@
 <template>
   <div >
-    MAIN
+    <p>MAIN<p/>
+    <HomeTutoring />
+    <ChildrenComponent />
+    <SliderMainComponent />
+    <LearningComponent />
+    <CoursesComponent />
+    <PrincingComponent />
+    <LogoComponent />
+
   </div>
 </template>
 
 <script>
+
+import HomeTutoring from '@/components/HomeTutoring.vue'
+import ChildrenComponent from '@/components/ChildrenComponent.vue'
+import SliderMainComponent from '@/components/SliderMainComponent.vue'
+import LearningComponent from '@/components/LearningComponent.vue'
+import CoursesComponent from '@/components/CoursesComponent.vue'
+import PrincingComponent from '@/components/PrincingComponent.vue'
+import LogoComponent from '@/components/LogoComponent.vue'
+
+
 export default {
   name: 'MainComponent',
-  props: {
-    
-  }
+  components: {
+    HomeTutoring,
+    ChildrenComponent,
+    SliderMainComponent,
+    LearningComponent,
+    CoursesComponent,
+    PrincingComponent,
+    LogoComponent,
+  },
 }
 </script>
 
