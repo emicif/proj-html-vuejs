@@ -3,7 +3,7 @@
     <p>MAIN<p/>
     <HomeTutoring />
     <ChildrenComponent />
-    <SliderMainComponent />
+    <SliderComponent />
     <LearningComponent />
     <CoursesComponent />
     <PrincingComponent />
@@ -16,7 +16,7 @@
 
 import HomeTutoring from '@/components/HomeTutoring.vue'
 import ChildrenComponent from '@/components/ChildrenComponent.vue'
-import SliderMainComponent from '@/components/SliderMainComponent.vue'
+import SliderComponent from '@/components/SliderComponent.vue'
 import LearningComponent from '@/components/LearningComponent.vue'
 import CoursesComponent from '@/components/CoursesComponent.vue'
 import PrincingComponent from '@/components/PrincingComponent.vue'
@@ -28,7 +28,7 @@ export default {
   components: {
     HomeTutoring,
     ChildrenComponent,
-    SliderMainComponent,
+    SliderComponent,
     LearningComponent,
     CoursesComponent,
     PrincingComponent,
