@@ -4,7 +4,9 @@
       <!-- header-top -->
         <div class="flex jc-between">
           <img alt="iAcademy-Logo" src="../../public/img/logo-light.png">
+           <SliderMainComponent />
           <!-- navbar     -->
+      
           <nav class="flex">
             <p><strong>HOME</strong></p>
             <p><strong>COURSES</strong></p>
@@ -13,13 +15,17 @@
             <p><strong>PAGES</strong></p>
             <p><strong>ELEMENTS</strong></p>
           </nav>
+         
+       
           <!-- icone     -->
+          
           <div class="icon-container">
             <font-awesome-icon icon="fas fa-search" class="icon"/>
             <font-awesome-icon icon="fa-solid fa-bars" class="icon"/>
             <font-awesome-icon icon="fa-solid fa-cart-arrow-down" class="icon"/>
           </div>
-        </div>
+        </div> 
+        
       <!-- / header-top -->
 
       <!-- header-middle -->
@@ -53,11 +59,13 @@
 
 // FINE FONTAWESONE
 
+import SliderMainComponent from '@/components/SliderMainComponent.vue'
 
 export default {
   name: 'HeaderComponent',
   components: {
-    FontAwesomeIcon
+    FontAwesomeIcon,
+    SliderMainComponent
   }
 }
 </script>
@@ -71,7 +79,7 @@ export default {
 // inizio header-top
 .header-style{
   height: 600px;
-  background-image: url("../../public/img/course-9-f-img.jpg");
+  // background-image: url("../../public/img/course-9-f-img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   //color: white;
