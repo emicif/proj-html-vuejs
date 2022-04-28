@@ -73,7 +73,11 @@ button {
 }
 
 .title {
-  width: 250px;
+  width: 410px;
+}
+
+.title h2 {
+  font-size: 2.5rem;
 }
 
 </style>

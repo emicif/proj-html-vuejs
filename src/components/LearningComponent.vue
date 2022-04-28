@@ -2,14 +2,13 @@
   <div>
       <div class="container" >
             <div class="slider-wrapper" tabindex="0" 
-              @keyUp.down="showNextSlide" 
-              @keyUp.up="showPrevSlide"
+            
               >
 
              <div class="thumbs">
-               <div class="thumb" v-for="(slide, index) in slides" :key="slide.id" @click="setActive(index)" :class="{ active: isActive }" >
+               <div class="thumb" v-for="(slide, index) in slides" :key="slide.id" @click="setActive(index)"  >
                  
-                  <h3>{{slide.titlethumbs}}</h3>
+                  <p>{{slide.titlethumbs}}</p>
                 
                </div>
                 
@@ -17,7 +16,7 @@
 
               
               <div class="item">
-                <h3>{{slides[activeSlideIndex].title}}</h3>
+                <h2>{{slides[activeSlideIndex].title}}</h2>
                 <p class="pt20">{{slides[activeSlideIndex].text}}</p>
 
                 <div class="flex pt40 card-inside">
@@ -132,7 +131,7 @@ export default {
     methods: {
         setActive: function (i) {
           this.activeSlideIndex = i;
-          return this.isActive = true 
+          this.isActive = true
         }
     }
 }
@@ -192,16 +191,17 @@ export default {
   border-bottom: 1px solid lightgray;
 }
 
-.thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.thumb p {
+  padding: 15px;
+  color: grey;
 }
 
-/* .thumb:active {
+
+
+.thumb:active {
   border-left: 2px solid rgb(210, 13, 13);
   opacity: 2;
-} */
+}
 
 .active {
   border-left: 2px solid rgb(210, 13, 13);
@@ -211,10 +211,12 @@ export default {
   justify-content: space-between;
 }
 
+.card-inside img {
+  padding-left: 10px;
+}
 
-
-.item h3 {
-  font-size: 40px;
+.item h2 {
+  font-size: 2.5rem;
 }
 
 .item p {
@@ -233,5 +235,6 @@ export default {
 .icon {
   color: #55acee;
 }
+
 
 </style>

@@ -32,6 +32,7 @@
                         <div class="text">
                           <h2>{{slides[activeSlideIndex].title}}</h2>
                           <p>{{slides[activeSlideIndex].sottotitle}}</p> 
+                          <button>{{slides[activeSlideIndex].button}}</button>
                         </div>  
                         
                 </div>
@@ -41,23 +42,9 @@
                       <div class="next" v-show = "activeSlideIndex < slides.length - 1" @click = "showNextSlide" ></div>
                   </div> 
               </div>
-        </div>
+          </div>
      </div>     
-        
-            
-                <!-- <div class="item">
-                    <img :src="slides[activeSlideIndex].image" :alt="slides[activeSlideIndex].title" />  -->
-                    
-                  
-
-                
-                 
-               
-
-
-     
-      
-    </div>
+</div>
 
 </template>
 
@@ -94,48 +81,56 @@ export default {
           id: 0,
           image: 'img/course-1-f-img.jpg',
           title: "Contemporary Ideas",
-          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est."
+          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est.",
+          button: "REGISTER NOW"
         },
         {
           image: 'img/course-2-f-img.jpg',
           title: "Course-2",
-          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est."
-
+          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est.",
+          button: "LOGIN IN"
         },
         {
           image: 'img/course-3-f-img.jpg',
           title: "Course-3",
-          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est."
+          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est.",
+          button: "SIGN UP NOW"
         },
         {
           image: 'img/course-4-f-img.jpg',
           title: "Course-4",
-          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est."
+          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est.",
+          button: "REGISTER NOW"
         },
         {
           image: 'img/course-5-f-img.jpg',
           title: "Course-5",
-          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est."
+          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est.",
+          button: "SIGN UP NOW"
         },
         {
           image: 'img/course-6-f-img.jpg',
           title: "Specialized Training",
-          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est."
+          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est.",
+          button: "LOGIN IN"
         },
         {
           image: 'img/course-7-f-img.jpg',
           title: "Course-7",
-          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est."
+          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est.",
+          button: "SIGN UP NOW"
         },
         {
           image: 'img/course-8-f-img.jpg',
           title: "Course-8",
-          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est."
+          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est.",
+          button: "REGISTER NOW"
         },
         {
           image: 'img/course-9-f-img.jpg',
           title: "Contemporary Ideas",
-          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est."
+          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est.",
+          button: "SIGN UP NOW"
         }
       ],
       activeSlideIndex: 0,
@@ -203,10 +198,12 @@ nav {
 
 nav p:hover {
  color: #40c4ff;
+ 
 }
 
 p {
-  padding-left: 10px;
+  padding-left: 10px;;
+
 }
 
 .icon-container{
@@ -215,6 +212,7 @@ p {
 
 .icon {
   margin: 10px;
+  cursor: pointer;
 }
 
 // fine header-top
@@ -222,55 +220,31 @@ p {
 
 // inizio header-middle
 
-.header-middle {
-  margin: 150px;
-  text-align: center;
-  h1 {
-    font-size: 70px;
-    padding: 20px;
-  }
-  p {
-    padding: 10px;
-  }
-  button {
-  margin-top: 10px;
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin-top: 20px;
   background-color: #40c4ff;
   border: none;
   color: white;
-  padding: 20px 40px;
-  }
+  width: 150px;
+  padding: 10px 40px;
+  align-self: center;
+  cursor: pointer;
 }
 
-// slide
 
+// slide
 .container {
     width: 100%;
     height: 100vh;
     max-width: 1200px;
-
-
 }
 
-.item {
-    float: left;
-    max-width: 1200px;
-    /* height: 300px; */
-    // position: relative;
-}
-
-.item img {
-   max-width: 1200px; 
-    object-fit: contain;
-  
-    opacity: 0.8;
-}
-
-.item .text {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    color: white;
-}
 
 .text h2 {
   text-align: center;
@@ -298,10 +272,7 @@ p {
   
 }
 
-.thumb {
-    height: calc((300px) / 5);
-    opacity: 0.5;
-}
+
 
 .thumb img {
     width: 100%;
@@ -309,10 +280,6 @@ p {
 
 }
 
-.thumb.active {
-    border: 2px solid #ccc;
-    opacity: 1;
-}
 
 .prev, .next {
     width: 20px;
@@ -348,6 +315,7 @@ p {
   background-size: cover;
   // background-image: url("/public/img/course-1-f-img.jpg")
   position: relative;
+ 
 }
 
 

@@ -237,7 +237,7 @@ export default {
   height: 500px;
   padding: 20px;
   background-color: white;
-  border: 1px solid grey;
+  border: 1px solid lightgrey;
 }
 
 .first {
@@ -246,10 +246,10 @@ export default {
 }
 
 
-
 .card h5,
 .card p {
   padding-bottom: 30px;
+  text-align: left;
 }
 
 
@@ -327,6 +327,7 @@ button {
   border: none;
   border-radius: 20%;
   padding: 0px 10px;
+  font-weight: bold;
 
 }
 

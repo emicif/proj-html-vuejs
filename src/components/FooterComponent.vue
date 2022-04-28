@@ -14,11 +14,11 @@
                 <li>Busy Life. Closer to Home</li>
               </ul>
               <!-- icona -->
-                <div class="flex icon">
+                <div class="flex icon number">
                     <font-awesome-icon icon="fa-solid fa-phone"/>
                     <p>1-677-124-44227</p>
                 </div>
-                <div class="flex icon">
+                <div class="flex icon number">
                     <font-awesome-icon icon="fa-regular fa-clock"/>
                     <p>Mon - Sat 8.00 - 18.00</p>
                 </div>
@@ -64,7 +64,7 @@
  <!-- inizio footer-bottom -->
       <div class="footer-bottom flex">
         <p>Copyright 2017 <font-awesome-icon icon="fa-regular fa-copyright"/> Mikado Themes</p>
-        <div class="flex">
+        <div class="flex column-right">
           <p>CALL +44 300 303 0266</p>
           <p>FOLLOW US</p>
           
@@ -142,6 +142,10 @@ footer {
     }
   }
 
+  .last-column {
+    padding-right: 20px;
+  }
+
   .last-column{
    img{
      height: 100px;
@@ -165,5 +169,21 @@ hr {
   justify-content: space-between;
 }
 
+.number p{
+  padding-left: 10px;
+
+}
+
+.third-column h3 {
+  padding-bottom: 10px;
+}
+
+.third-column p {
+  padding-top: 10px;
+}
+
+.column-right p {
+  padding-right: 10px;
+}
 
 </style>

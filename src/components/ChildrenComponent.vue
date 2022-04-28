@@ -4,7 +4,7 @@
       <img src="../../public/img/h5-img-2.jpg" alt="">
       <div class="box-right">
         <h2>Empowering Children to Reach Their Potential.</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam eius molestiae nulla assumenda ad tempore accusantium totam nam, sunt, mollitia veritatis, distinctio ipsam fugit labore omnis deserunt quibusdam excepturi maxime.</p>
+        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam eius molestiae nulla assumenda ad tempore accusantium totam nam, sunt, mollitia veritatis, distinctio ipsam fugit labore omnis deserunt quibusdam excepturi maxime.</p>
       <div class="flex numberText">
         <div class="pr100">
           <p class="number">168</p>
@@ -70,6 +70,9 @@ export default {
  }
 }
 
+.text {
+   color: grey;
+}
 
 
 
