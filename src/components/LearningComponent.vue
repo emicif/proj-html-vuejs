@@ -7,9 +7,12 @@
               >
 
              <div class="thumbs">
-                <div class="thumb active" v-for="(slide, index) in slides" :key="slide.id" @click="setActive(index)" >
+               <div class="thumb" v-for="(slide, index) in slides" :key="slide.id" @click="setActive(index)" :class="{ active: isActive }" >
+                 
                   <h3>{{slide.titlethumbs}}</h3>
-                </div>
+                
+               </div>
+                
               </div>
 
               
@@ -123,11 +126,13 @@ export default {
         }
       ],
       activeSlideIndex: 0,
+      isActive: false
       }
     },
     methods: {
         setActive: function (i) {
           this.activeSlideIndex = i;
+          return this.isActive = true 
         }
     }
 }
@@ -177,13 +182,14 @@ export default {
     float: left;
     width: 150px;
     height: 400px;
-    border: 1px solid grey;
+    border: 1px solid lightgray;
     position: relative;
 }
 
 .thumb {
   height: calc((400px) / 6);
   opacity: 1;
+  border-bottom: 1px solid lightgray;
 }
 
 .thumb img {
@@ -192,9 +198,13 @@ export default {
   object-fit: cover;
 }
 
-.active {
+/* .thumb:active {
   border-left: 2px solid rgb(210, 13, 13);
   opacity: 2;
+} */
+
+.active {
+  border-left: 2px solid rgb(210, 13, 13);
 }
 
 .card-inside {

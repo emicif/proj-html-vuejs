@@ -91,6 +91,7 @@ export default {
     text-align: center;
     color: white;
     margin-top: 30px;
+    position: relative;
     
 }
 
@@ -100,13 +101,11 @@ export default {
     max-width: 1200px;
     height: 300px;
     position: absolute;
-    
-
 }
 
 .item img {
-   max-width: 1200px;
-     width: 100%; 
+    max-width: 1200px;
+    width: 100%; 
     height: 100%; 
     object-fit: cover;
 }
@@ -147,23 +146,23 @@ export default {
     height: 20px;
     margin: 10px 0;
     border-radius: 50%;
-    /* background: #ccc; */
-    position: relative;
-    top: 50%;
-    left: 440px;
-   
+    /* background: #ccc; */   
     cursor: pointer;
     z-index: 999;
 }
 
 .prev {
-   background: red;
-  transform: translate(-50%);
+  background: lightgray;
+  position: absolute;
+  bottom: 180px;
+  left: 380px;
 }
 
 .next {
-  background: yellow;
-  transform: translate(-50%);
+  background: lightgray;
+  position: absolute;
+  bottom: 180px;
+  left: 430px;
 }
 
 

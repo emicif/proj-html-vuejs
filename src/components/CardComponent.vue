@@ -9,14 +9,13 @@
             @mouseleave="startTimer"
             >
 
-                <div class="item">
-                  <div class="card">
-                    <img :src="slides[activeSlideIndex].image" :alt="slides[activeSlideIndex].title" /> 
-                    <div class="flex first">
-                      <h3>{{slides[activeSlideIndex].title}}</h3>  
-                      <button>FREE</button>
-                    
-                    </div>
+              <div class="item">
+                <div class="card">
+                  <img :src="slides[activeSlideIndex].image" :alt="slides[activeSlideIndex].title" /> 
+                  <div class="flex first">
+                    <h3>{{slides[activeSlideIndex].title}}</h3>  
+                    <button>FREE</button>
+                  </div>
                     <h5>{{slides[activeSlideIndex].sottotitle}}</h5>
                     <p>{{slides[activeSlideIndex].text}}</p>
                     <div class="flex bottom">
@@ -27,22 +26,24 @@
                      
                   </div>
                    
-                  <div class="card">
+                  <div class="card" v-if="activeSlideIndex<=11">
                     <img :src="slides[activeSlideIndex+1].image" :alt="slides[activeSlideIndex].title" /> 
                      <div class="flex first">
                       <h3>{{slides[activeSlideIndex+1].title}}</h3>  
                       <button>FREE</button>
                     </div>
 
+                   
                     <h5>{{slides[activeSlideIndex+1].sottotitle}}</h5>
                     <p>{{slides[activeSlideIndex+1].text}}</p>
-                    <div class="flex bottom">
-                      <div class="grey"><font-awesome-icon icon="fa-solid fa-user" /> 1 </div>
-                     <div class="grey"><font-awesome-icon icon="fa-solid fa-bookmark" /> PROGRAMMING </div>
-                    </div>
+                      <div class="flex bottom">
+                        <div class="grey"><font-awesome-icon icon="fa-solid fa-user" /> 1 </div>
+                        <div class="grey"><font-awesome-icon icon="fa-solid fa-bookmark" /> PROGRAMMING </div>
+                      </div>
                   </div> 
 
-                  <div class="card">
+
+                  <div class="card" v-if="activeSlideIndex<=10">
                     <img :src="slides[activeSlideIndex+2].image" :alt="slides[activeSlideIndex].title" /> 
                     <div class="flex first second">
                       <h3>{{slides[activeSlideIndex+2].title}}</h3>  
@@ -61,7 +62,7 @@
 
                 <div class="thumbs">
                     <div class="prev" v-show = "activeSlideIndex > 0" @click = "showPrevSlide" ></div>
-                    <div class="next" v-show = "activeSlideIndex < slides.length - 1" @click = "showNextSlide" ></div>
+                    <div class="next" v-show = "activeSlideIndex < slides.length - 3" @click = "showNextSlide" ></div>
                 </div>
 
             </div>
@@ -203,7 +204,7 @@ export default {
             }
         },
         startTimer(){
-            this.intervalCleanerID = setInterval(this.showNextSlide, 3000);
+            this.intervalCleanerID = setInterval(this.showNextSlide - 3, 3000);
         },
         stopTimer(){
             clearInterval(this.intervalCleanerID);
@@ -218,6 +219,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .item {
@@ -227,7 +229,7 @@ export default {
     padding: 20px;
     max-width: 1200px;
     height: 00px;
-    position: relative;
+    
  
 }
 
@@ -283,18 +285,19 @@ export default {
     margin: 10px 0;
     border-radius: 50%;
     /* background: #ccc; */
-    background: red;
+    background: lightgray;
     position: absolute;
-    top: 65%;
-    left: 0px;
-    transform: translate(-3200%);
+    right: 580px;
+    bottom: 30%;
     cursor: pointer;
     z-index: 999;
 }
 
 .next {
-  background: yellow;
-  transform: translate(-2900%);
+  background: lightgray;
+  position: absolute;
+  right: 550px;
+  bottom: 30%;
 }
 
 
@@ -323,7 +326,6 @@ button {
   color: white;
   border: none;
   border-radius: 20%;
-
   padding: 0px 10px;
 
 }

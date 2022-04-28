@@ -47,10 +47,10 @@
                           <li>15 Days</li>
                           <li class="flag"><font-awesome-icon icon="fa-solid fa-check" /></li>
                           <li class="flag"><font-awesome-icon icon="fa-solid fa-check" /></li>
-                          <li><font-awesome-icon icon="fa-solid fa-xmark" /></li>
-                          <li><font-awesome-icon icon="fa-solid fa-xmark" /></li>
-                          <li><font-awesome-icon icon="fa-solid fa-xmark" /></li>
-                          <li><font-awesome-icon icon="fa-solid fa-xmark" /></li>
+                          <li class="xmark"><font-awesome-icon icon="fa-solid fa-xmark" /></li>
+                          <li class="xmark"><font-awesome-icon icon="fa-solid fa-xmark" /></li>
+                          <li class="xmark"><font-awesome-icon icon="fa-solid fa-xmark" /></li>
+                          <li class="xmark"><font-awesome-icon icon="fa-solid fa-xmark" /></li>
                       </ul>
                       <div class="button"><button>GET IT NOW</button></div>
                   </div> 
@@ -72,15 +72,15 @@
                           <li class="flag"><font-awesome-icon icon="fa-solid fa-check" /></li>
                           <li class="flag"><font-awesome-icon icon="fa-solid fa-check" /></li>
                           <li class="flag"><font-awesome-icon icon="fa-solid fa-check" /></li>
-                          <li><font-awesome-icon icon="fa-solid fa-xmark" /></li>
-                          <li><font-awesome-icon icon="fa-solid fa-xmark" /></li>
+                          <li class="xmark"><font-awesome-icon icon="fa-solid fa-xmark" /></li>
+                          <li class="xmark"><font-awesome-icon icon="fa-solid fa-xmark" /></li>
                       </ul>
                       <div class="button btn-blue"><button>GET IT NOW</button></div>
                   </div> 
                 </div>
 
                 <!-- 4 colonna -->
-                <div class="col colomn title-col">
+                <div class="col colomn">
                    <div class="title-col">
                       <img src="img/h5-custom-icon-9.png" alt="">
                        <h3><strong>Advanced</strong></h3>
@@ -186,7 +186,7 @@ export default {
 
 .col{
     width: 900px;
-    border-bottom: 1px solid lightgrey;
+    border: 1px solid lightgrey;
 }
 
 
@@ -201,7 +201,7 @@ ul {
 
 li {
   padding: 15px;
-  border: 1px solid grey;
+  border-bottom: 1px solid lightgrey;
 }
 
 .colomn {
@@ -210,6 +210,10 @@ li {
 
 .flag {
   color: #55acee;
+}
+
+.xmark {
+  color: grey
 }
 
 
@@ -236,7 +240,7 @@ button {
 
 .title-col-2 {
   background-color: #f2f8fc;
-  height: 148px;
+  height: 149px;
 }
 
 .title-col p {
@@ -244,7 +248,7 @@ button {
 }
 
 .title-col-first {
-  height: 150px;
+  height: 180px;
   padding-top: 60px;
 }
 
@@ -254,7 +258,7 @@ button {
 
 .col-container {
   margin-top: 50px;
-  border: 1px solid lightgray;
+  /* border: 1px solid lightgray; */
   border-top: 2px solid #40c4ff;
   
 }
@@ -273,7 +277,7 @@ hr {
 
 .cart {
   background-color: white;
-  border: 0.5px solid lightgray;
+  /* border: 0.5px solid lightgray; */
   padding: 10px;
   position: absolute;
   right: -40px;
@@ -282,11 +286,12 @@ hr {
 
 .cart .icon {
   color: #ef2853;
+  cursor: pointer;
 }
 
 .circle .icon {
   color: white;
-
+  cursor: pointer;
 }
 
 .circle {
