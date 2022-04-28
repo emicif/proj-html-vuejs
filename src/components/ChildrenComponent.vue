@@ -64,6 +64,10 @@ export default {
     padding-right: 100px;
   }
  
+ .button {
+   display: flex;
+   justify-content: flex-end;
+ }
 }
 
 

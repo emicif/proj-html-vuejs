@@ -65,6 +65,7 @@
                 </div>
 
             </div>
+               <ButtonComponent />
         </div>
   </div>
 </template>
@@ -89,10 +90,13 @@
 
 // FINE FONTAWESONE
 
+import ButtonComponent from '@/components/ButtonComponent.vue'
+
 export default {
     name: 'CardComponent',
     components: {
     FontAwesomeIcon,
+    ButtonComponent
     },
     data: function() {
       return {

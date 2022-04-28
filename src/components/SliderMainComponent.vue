@@ -1,5 +1,6 @@
 <template>
   <div>
+  
       <div class="container" >
             <div class="slider-wrapper" tabindex="0" 
             @keyUp.down="showNextSlide" 
@@ -11,7 +12,11 @@
 
                 <div class="item">
                     <img :src="slides[activeSlideIndex].image" :alt="slides[activeSlideIndex].title" /> 
-                        
+                  
+
+
+                    <!-- <h2>{{slides[activeSlideIndex].title}}</h2>
+                    <p>{{slides[activeSlideIndex].sottotitle}}</p>  -->
                 </div>
 
                 <div class="thumbs">
@@ -34,39 +39,55 @@ export default {
         slides : [
         {
           image: 'img/course-1-f-img.jpg',
-          title: "Course-1"
+          title: "Contemporary Ideas",
+          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est."
         },
         {
           image: 'img/course-2-f-img.jpg',
-          title: "Course-2"
+          title: "Course-2",
+          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est."
+
         },
         {
           image: 'img/course-3-f-img.jpg',
-          title: "Course-3"
-         
+          title: "Course-3",
+          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est."
         },
         {
           image: 'img/course-4-f-img.jpg',
-          title: "Course-4"
-         
+          title: "Course-4",
+          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est."
         },
         {
           image: 'img/course-5-f-img.jpg',
-          title: "Course-5"
-         
+          title: "Course-5",
+          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est."
         },
         {
           image: 'img/course-6-f-img.jpg',
-          title: "Course-6"
-         
+          title: "Specialized Training",
+          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est."
+        },
+        {
+          image: 'img/course-7-f-img.jpg',
+          title: "Course-7",
+          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est."
+        },
+        {
+          image: 'img/course-8-f-img.jpg',
+          title: "Course-8",
+          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est."
+        },
+        {
+          image: 'img/course-9-f-img.jpg',
+          title: "Contemporary Ideas",
+          sottotitle: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est."
         }
-
       ],
       activeSlideIndex: 0,
       intervalCleanerID: undefined,
-    
-      }
-      
+
+      }      
     },
     methods: {
         showPrevSlide(){
@@ -91,7 +112,7 @@ export default {
 
 <style scoped>
 .container {
-    height: 100vh;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,25 +120,40 @@ export default {
 
 .item {
     float: left;
-    width: 700px;
     max-width: 1200px;
-    height: 300px;
+    /* height: 300px; */
     position: relative;
 }
 
 .item img {
-   max-width: 1200px;
-     width: 100%; 
-    height: 100%; 
-    object-fit: cover;
+   max-width: 1200px; 
+    object-fit: contain;
+    position: relative;
+    opacity: 0.8;
 }
 
 .item .text {
     position: absolute;
     right: 20px;
     bottom: 20px;
-    text-align: right;
     color: white;
+}
+
+.item h2 {
+  position: absolute;
+  top: 40%;
+  left: 200px;
+  font-size: 70px;
+  color: white;
+ 
+}
+
+.item p {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  left: 10px;
+  color: blue;
 }
 
 .thumbs {

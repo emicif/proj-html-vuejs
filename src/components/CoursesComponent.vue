@@ -7,6 +7,7 @@
         <h2>Popular Online Courses</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente provident illo alias unde distinctio suscipit dolore? Saepe, eum. Quae sapiente minus suscipit quasi consectetur eius fugit delectus sunt dolorum nisi!</p>
         <CardComponent />
+     
   </div>
 </template>
 

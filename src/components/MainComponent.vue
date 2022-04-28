@@ -1,6 +1,6 @@
 <template>
-  <div >
-    <p>MAIN<p/>
+  <div>
+    <SmallCard />
     <HomeTutoring />
     <ChildrenComponent />
     <SliderComponent />
@@ -14,6 +14,7 @@
 
 <script>
 
+import SmallCard from '@/components/SmallCard.vue'
 import HomeTutoring from '@/components/HomeTutoring.vue'
 import ChildrenComponent from '@/components/ChildrenComponent.vue'
 import SliderComponent from '@/components/SliderComponent.vue'
@@ -23,10 +24,12 @@ import PrincingComponent from '@/components/PrincingComponent.vue'
 import LogoComponent from '@/components/LogoComponent.vue'
 
 
+
 export default {
   name: 'MainComponent',
   components: {
     HomeTutoring,
+    SmallCard,
     ChildrenComponent,
     SliderComponent,
     LearningComponent,

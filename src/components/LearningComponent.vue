@@ -1,38 +1,36 @@
 <template>
   <div>
-      <h2>Learning Possibilities</h2>
       <div class="container" >
             <div class="slider-wrapper" tabindex="0" 
-            @keyUp.down="showNextSlide" 
-            @keyUp.up="showPrevSlide"
-            
-            >
+              @keyUp.down="showNextSlide" 
+              @keyUp.up="showPrevSlide"
+              >
 
              <div class="thumbs">
-                  <div class="thumb active" v-for="(slide, index) in slides" :key="slide.id" @click="setActive(index)" >
-                      <h3>{{slide.title}}</h3>
-                  </div>
+                <div class="thumb active" v-for="(slide, index) in slides" :key="slide.id" @click="setActive(index)" >
+                  <h3>{{slide.titlethumbs}}</h3>
+                </div>
               </div>
 
               
               <div class="item">
-                  <h3>{{slides[activeSlideIndex].title}}</h3>
-                  <p class="pt20">{{slides[activeSlideIndex].text}}</p>
-                  <div class="flex pt40 card-inside">
-                    
-                    <div class="elenco">
-                       
-                      <p><font-awesome-icon class="icon" icon="fa-solid fa-check" /> {{slides[activeSlideIndex].sottotitle}}</p>
-                      <p><font-awesome-icon class="icon" icon="fa-solid fa-check" /> {{slides[activeSlideIndex].sottotitle_2}}</p>
-                      <p><font-awesome-icon class="icon" icon="fa-solid fa-check" /> {{slides[activeSlideIndex].sottotitle_3}}</p>
-                      <p><font-awesome-icon class="icon" icon="fa-solid fa-check" /> {{slides[activeSlideIndex].sottotitle_4}}</p>
-                    </div>
-                     
-                      <img :src="slides[activeSlideIndex].image" :alt="slides[activeSlideIndex].title" />
+                <h3>{{slides[activeSlideIndex].title}}</h3>
+                <p class="pt20">{{slides[activeSlideIndex].text}}</p>
+
+                <div class="flex pt40 card-inside">
+                  <div class="elenco">     
+                    <p><font-awesome-icon class="icon" icon="fa-solid fa-check" /> {{slides[activeSlideIndex].sottotitle}}</p>
+                    <p><font-awesome-icon class="icon" icon="fa-solid fa-check" /> {{slides[activeSlideIndex].sottotitle_2}}</p>
+                    <p><font-awesome-icon class="icon" icon="fa-solid fa-check" /> {{slides[activeSlideIndex].sottotitle_3}}</p>
+                    <p><font-awesome-icon class="icon" icon="fa-solid fa-check" /> {{slides[activeSlideIndex].sottotitle_4}}</p>
                   </div>
+                      
+                  <img :src="slides[activeSlideIndex].image" :alt="slides[activeSlideIndex].title" />
+                </div>
               </div>
+
             </div>
-        </div>
+      </div>
   </div>
 </template>
 
@@ -64,6 +62,7 @@ export default {
       return {
         slides : [
         {
+          titlethumbs: "What We Do",
           title: "Learning Possibilities",
           text: "Lorem  ipsum dolor sit amet, te aeros consulatu pro, quem labores petentium no sea, atqui posidonium interpretaris",
           sottotitle: "We wneich lives thwough learning.",
@@ -73,7 +72,8 @@ export default {
           image: 'img/h12-tabs-icon-1.png',
         },
         {
-          title: "Degree Programme",
+          titlethumbs: "Degree Programme",
+          title: "Programme",
           text: "Lorem  ipsum dolor sit amet, te aeros consulatu pro, quem labores petentium no sea, atqui posidonium interpretaris",
           sottotitle: "We wneich lives thwough learning.",
           sottotitle_2: "Maximizing potential through individual attention.",
@@ -82,7 +82,8 @@ export default {
           image: 'img/h12-tabs-icon-2.png',
         },
         {
-          title: "Career Achievements",
+          titlethumbs: "Career Achievements",
+          title: "Career",
           text: "Lorem  ipsum dolor sit amet, te aeros consulatu pro, quem labores petentium no sea, atqui posidonium interpretaris",
           sottotitle: "We wneich lives thwough learning.",
           sottotitle_2: "Maximizing potential through individual attention.",
@@ -91,7 +92,8 @@ export default {
           image: 'img/h12-tabs-icon-3.png',
         },
         {
-          title: "Personal Managment",
+          titlethumbs: "Personal Managment",
+          title: "Your Personal Managment",
           text: "Lorem  ipsum dolor sit amet, te aeros consulatu pro, quem labores petentium no sea, atqui posidonium interpretaris",
           sottotitle: "We wneich lives thwough learning.",
           sottotitle_2: "Maximizing potential through individual attention.",
@@ -100,6 +102,7 @@ export default {
           image: 'img/h12-tabs-icon-4.png',
         },
         {
+          titlethumbs: "Steps To Success",
           title: "Steps To Success",
           text: "Lorem  ipsum dolor sit amet, te aeros consulatu pro, quem labores petentium no sea, atqui posidonium interpretaris",
           sottotitle: "We wneich lives thwough learning.",
@@ -109,7 +112,8 @@ export default {
           image: 'img/h12-tabs-icon-5.png',
         },
         {
-          title: "Knowledge Trans",
+          titlethumbs: "Knowledge Trans",
+          title: "Knowledge",
           text: "Lorem  ipsum dolor sit amet, te aeros consulatu pro, quem labores petentium no sea, atqui posidonium interpretaris",
           sottotitle: "We wneich lives thwough learning.",
           sottotitle_2: "Maximizing potential through individual attention.",
@@ -144,7 +148,7 @@ export default {
 
 
 .container {
-    height: 100vh;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -178,19 +182,19 @@ export default {
 }
 
 .thumb {
-    height: calc((400px) / 6);
-    opacity: 1;
+  height: calc((400px) / 6);
+  opacity: 1;
 }
 
 .thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .active {
-    border-left: 2px solid rgb(210, 13, 13);
-    opacity: 2;
+  border-left: 2px solid rgb(210, 13, 13);
+  opacity: 2;
 }
 
 .card-inside {

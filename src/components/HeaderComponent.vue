@@ -1,13 +1,14 @@
 <template>
   <div >
+     
+ 
     <div class="header-style">
       <!-- header-top -->
         <div class="flex jc-between">
           <img alt="iAcademy-Logo" src="../../public/img/logo-light.png">
-           <SliderMainComponent />
+
           <!-- navbar     -->
-      
-          <nav class="flex">
+           <nav class="flex">
             <p><strong>HOME</strong></p>
             <p><strong>COURSES</strong></p>
             <p><strong>INSTRUCTORS</strong></p>
@@ -15,25 +16,27 @@
             <p><strong>PAGES</strong></p>
             <p><strong>ELEMENTS</strong></p>
           </nav>
-         
-       
-          <!-- icone     -->
-          
+
+
+        <!-- icone     -->
           <div class="icon-container">
             <font-awesome-icon icon="fas fa-search" class="icon"/>
             <font-awesome-icon icon="fa-solid fa-bars" class="icon"/>
             <font-awesome-icon icon="fa-solid fa-cart-arrow-down" class="icon"/>
           </div>
         </div> 
+         <SliderMainComponent />
+
+           
         
       <!-- / header-top -->
 
-      <!-- header-middle -->
+      <!-- header-middle
       <div class="header-middle">
         <h1>Contemporary Ideas</h1>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci dolore voluptate minima laboriosam ab iusto iste, officia nihil facere sint totam fugit officiis est.</p>
         <button><strong>REGISTER NOW</strong></button>
-      </div>
+      </div> -->
       
     </div>
   </div>
@@ -78,7 +81,7 @@ export default {
 
 // inizio header-top
 .header-style{
-  height: 600px;
+  // height: 600px;
   // background-image: url("../../public/img/course-9-f-img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
